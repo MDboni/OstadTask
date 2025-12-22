@@ -85,11 +85,7 @@ export default function EmployeeTable({ data, onEdit, onArchive, onDelete }) {
             onConfirm={() => onDelete(r.id)}
           >
             <Tooltip title="Delete employee">
-              <Button
-                size="small"
-                danger
-                icon={<DeleteOutlined />}
-              />
+              <Button size="small" danger icon={<DeleteOutlined />} />
             </Tooltip>
           </Popconfirm>
         </Space>
@@ -98,17 +94,51 @@ export default function EmployeeTable({ data, onEdit, onArchive, onDelete }) {
   ];
 
   return (
-    <Table
-      rowKey="id"
-      columns={columns}
-      dataSource={data}
-      pagination={{
-        pageSizeOptions: [5, 10, 20],
-        showSizeChanger: true,
+    <div
+      style={{
+        padding: 16,
+        borderRadius: 16,
+        background:
+          "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
       }}
-      bordered
-      size="middle"
-      rowClassName={() => "employee-row"}
-    />
+    >
+      <Table
+        rowKey="id"
+        columns={columns}
+        dataSource={data}
+        pagination={{
+          pageSizeOptions: [5, 10, 20],
+          showSizeChanger: true,
+        }}
+        bordered
+        size="middle"
+        rowClassName={(_, index) =>
+          index % 2 === 0 ? "row-light" : "row-dark"
+        }
+      />
+
+      {/* Inline style for row colors */}
+      <style>
+        {`
+          .row-light td {
+            background: #ffffff;
+          }
+
+          .row-dark td {
+            background: #f6f8ff;
+          }
+
+          .ant-table-thead > tr > th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+          }
+
+          .ant-table-row:hover td {
+            background: #e6f0ff !important;
+          }
+        `}
+      </style>
+    </div>
   );
 }

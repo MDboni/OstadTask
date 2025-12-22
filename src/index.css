@@ -1,17 +1,37 @@
+/* Global App Background */
 body {
-  background: #f5f7fb;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #667eea,   /* soft blue */
+    #764ba2,   /* purple */
+    #6b8dd6,   /* sky blue */
+    #89f7fe    /* light cyan */
+  );
+  background-attachment: fixed;
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
+/* Dashboard Wrapper */
 .dashboard-container {
   max-width: 1400px;
-  margin: auto;
-  padding: 24px;
-  background: #fff;
-  min-height: 100vh;
-  border-radius: 12px;
+  margin: 32px auto;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  min-height: calc(100vh - 64px);
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 10px 20px rgba(102, 126, 234, 0.15);
+  backdrop-filter: blur(8px);
 }
 
-
-.employee-row:hover {
-  background-color: #f5faff;
+/* Table Row Hover */
+.employee-row:hover td {
+  background: linear-gradient(
+    90deg,
+    #eef2ff,
+    #f5faff
+  ) !important;
 }
