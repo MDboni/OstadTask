@@ -1,0 +1,17 @@
+body {
+  background: #f5f7fb;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+  border-radius: 12px;
+}
+
+
+.employee-row:hover {
+  background-color: #f5faff;
+}
