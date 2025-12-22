@@ -51,7 +51,7 @@ o Status: required
 • Add a Performance Score field (1–100).
 • Render it using an AntD Progress bar in the table.
 
-lIVE lINK : 
+lIVE lINK : https://ostad-task.vercel.app/
 
 <img width="1356" height="496" alt="image" src="https://github.com/user-attachments/assets/b092574b-6c0d-4320-8ff5-8108a88d7767" />
 
